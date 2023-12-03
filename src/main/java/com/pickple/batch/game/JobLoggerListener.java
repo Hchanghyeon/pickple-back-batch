@@ -16,9 +16,9 @@ public class JobLoggerListener extends JobExecutionListenerSupport {
         log.info("JOB 수행완료 {}", jobExecution);
 
         if (jobExecution.getStatus().equals(BatchStatus.COMPLETED)) {
-            log.info("성공 슬랙 API");
+            log.info("Job 성공");
         } else {
-            log.info("실패 슬랙 API");
+            log.info("Job 실패");
         }
     }
 }
