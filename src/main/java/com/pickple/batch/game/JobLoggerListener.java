@@ -16,9 +16,9 @@ public class JobLoggerListener extends JobExecutionListenerSupport {
         log.info("JOB 수행완료 {}", jobExecution);
 
         if (jobExecution.getStatus().equals(BatchStatus.COMPLETED)) {
-            log.info("Job 성공 빌드 완료");
+            log.info("Job 성공 빌드 완료 -");
         } else {
-            log.info("Job 실패 빌드 실패");
+            log.info("Job 실패 빌드 실패 -");
         }
     }
 }
