@@ -10,11 +10,15 @@ import com.pickple.batch.game.domain.GameStatusUpdate;
 @Mapper
 public interface GameMapper {
 
-    List<GameStatusUpdate> findGamesByStatusAndPlayDateStartTimeBeforeNow(final String status,
-            final LocalDateTime nowDateTime);
+    List<GameStatusUpdate> findGamesByStatusAndPlayDateStartTimeBeforeNow(
+            final String status,
+            final LocalDateTime nowDateTime
+    );
 
-    List<GameStatusUpdate> findGamesByStatusAndPlayDateEndTimeBeforeNow(final String status,
-            final LocalDateTime nowDateTime);
+    List<GameStatusUpdate> findGamesByStatusAndPlayDateEndTimeBeforeNow(
+            final String status,
+            final LocalDateTime nowDateTime
+    );
 
     void updateGameStatus(final Long id, final String status);
 }
